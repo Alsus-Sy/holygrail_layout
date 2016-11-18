@@ -21,11 +21,12 @@ html, body {
     height: 100%;
 }
 
-body {
+.HolyGrail, .HolyGrail-body {
     display: flex;
     /* display in main axis view */
     flex-direction: column;
     /* swaps the main and cross axis */
+    min-height: 100vh;
     font-size: 10px;
     background: rgb(28, 167, 232);
 }
@@ -40,16 +41,6 @@ body {
 
 a {
     text-decoration: none;
-}
-
-.main-header {
-    flex: 0 1 auto;
-}
-
-.main-content {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
 }
 
 .thumbnail-item {
@@ -70,8 +61,6 @@ a {
     white-space: nowrap;
     overflow-x: auto;
 }
-
-
 /* this anchor tag work for specific attritubte */
 
 .thumbnail-img {
@@ -89,12 +78,6 @@ a {
     font-size: 18px;
 }
 
-.detail-image-container {
-  flex: 1 1 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .detail-image {
     width: 90%;
@@ -118,19 +101,17 @@ a {
 /* add media query for viewport at least 768px,
 which is a common device width for tablets */
 
-@media all and (orientation:landscape) {
-  .main-content {
-    flex-direction: row;
-    overflow: hidden;
-  }
-
-  .thumbnail-list {
+@media all and (min-width: 768px) {
+  .HolyGrail-body, .HolyGrail-content, .HolyGrail-nav, .HolyGrail-ads {
+    display: flex;
     flex-direction: column;
-    order: 0;
-    margin-left: 20px;
+    order: 2;
   }
 
-  .thumbnail-item + .thumbnail-item {
-    margin-top: 20px;
+  .main-header {
+    order: 0;
+  }
+  .footer-container {
+    order: 4;
   }
 }
