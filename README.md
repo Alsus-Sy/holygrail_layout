@@ -12,3 +12,6 @@ this is a repo for learning how to do web
 
 - git config --global user.name "username"
 - git config --global user.email "useremail"
+
+/this is the challge to build HolyGrail layout, not sure if this counted.
+/will come back for improvment when I get more knowlegde.  
